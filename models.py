@@ -10,19 +10,17 @@ class tt_twitter:
     def create_table(self):
         #self.cur.execute("""DROP TABLE tt_twitter""")
         self.cur.execute("""CREATE TABLE IF NOT EXISTS tt_twitter (
-<<<<<<< Updated upstream
         top INTEGER,
         tittles TEXT,
         twitts INTEGER,
         date TEXT,
         time TEXT
-=======
+
         top NUMERIC,
         tittles TEXT,
         twitts NUMERIC,
         date DATE,
         time TIME
->>>>>>> Stashed changes
         )""")
 
     def insert(self,item):
@@ -34,9 +32,6 @@ class tt_twitter:
         rows = self.cur.fetchall()
         return rows
 
-<<<<<<< Updated upstream
-=======
-    
     def where_con(self,statement):
 
         self.cur.execute(statement)
@@ -51,5 +46,3 @@ class tt_twitter:
 
         for row in rows:
             return rows
->>>>>>> Stashed changes
-
